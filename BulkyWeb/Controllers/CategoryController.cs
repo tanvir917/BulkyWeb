@@ -1,5 +1,5 @@
-using BulkyWeb.Data;
-using BulkyWeb.Models;
+using Bulky.DataAccess.Data;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWeb.Controllers
@@ -24,7 +24,7 @@ namespace BulkyWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the name.");
             }
@@ -44,13 +44,13 @@ namespace BulkyWeb.Controllers
 
         public IActionResult Edit(int id)
         {
-            if(id == null || id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
             Category categoryFromDb = _db.Categories.Find(id); //only works with primary key
-            Category categoryFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id == id);
-            Category categoryFromDb2 = _db.Categories.Where(u=>u.Id == id).FirstOrDefault();
+            Category categoryFromDb1 = _db.Categories.FirstOrDefault(u => u.Id == id);
+            Category categoryFromDb2 = _db.Categories.Where(u => u.Id == id).FirstOrDefault();
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -89,7 +89,7 @@ namespace BulkyWeb.Controllers
         public IActionResult DeletePOST(int? id)
         {
             Category obj = _db.Categories.Find(id);
-            if(obj == null)
+            if (obj == null)
             {
                 return NotFound();
             }
