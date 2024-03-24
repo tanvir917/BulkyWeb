@@ -19,7 +19,7 @@ namespace BulkyWeb.Controllers
         // GET: ProductController
         public ActionResult Index()
         {
-            List<Product> objProductList = _unitOfWork.Product.GetAll().ToList();
+            List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
 
             return View(objProductList);
         }
