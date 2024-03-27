@@ -59,6 +59,9 @@
 			<GlobalPropertiesToRemove>
 			</GlobalPropertiesToRemove>
 		</ProjectReference>
+		<ProjectReference Include="..\Bulky.Utility\Bulky.Utility.csproj">
+		  <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+		</ProjectReference>
 	</ItemGroup>
 	<ItemGroup>
 		<Content Remove="wwwroot\images\" />
