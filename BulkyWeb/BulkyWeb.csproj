@@ -25,6 +25,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
+		<PackageReference Include="Stripe.net" Version="43.21.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Remove="Areas\Admin\Controllers\" />
