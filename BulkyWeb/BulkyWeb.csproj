@@ -38,6 +38,7 @@
 		<None Remove="Areas\Admin\Views\Product\" />
 		<None Remove="Areas\Admin\Views\Company\" />
 		<None Remove="Areas\Customer\Views\Cart\" />
+		<None Remove="Areas\Admin\Views\Order\" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Areas\Admin\" />
@@ -54,6 +55,7 @@
 		<Folder Include="Areas\Admin\Views\Product\" />
 		<Folder Include="Areas\Admin\Views\Company\" />
 		<Folder Include="Areas\Customer\Views\Cart\" />
+		<Folder Include="Areas\Admin\Views\Order\" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Bulky.DataAccess\Bulky.DataAccess.csproj">
