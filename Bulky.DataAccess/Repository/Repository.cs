@@ -22,7 +22,7 @@ namespace Bulky.DataAccess.Repository
             dbSet.Add(entity);
         }
 
-        T IRepository<T>.Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        T IRepository<T>.Get(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = false)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
