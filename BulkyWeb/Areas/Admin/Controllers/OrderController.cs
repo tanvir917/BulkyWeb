@@ -130,7 +130,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             orderVM.OrderDetail = _unitOfWork.OrderDetail.GetAll(u => u.OrderHeaderId == orderVM.OrderHeader.Id, includeProperties: "Product");
             //Customer account,so payment needed
             //stripe
-            var domain = "https://localhost:7273/";
+            var domain = Request.Scheme + "://" + Request.Host.Value + "/"; ;
             var options = new SessionCreateOptions
             {
                 SuccessUrl = domain + $"Admin/Order/PaymentConfirmation?id={orderVM.OrderHeader.Id}",

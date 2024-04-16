@@ -124,7 +124,7 @@ namespace BulkyWeb.Areas.Customer.Controllers
             {
                 //Customer account,so payment needed
                 //stripe
-                var domain = "https://localhost:7273/";
+                var domain = Request.Scheme + "://" + Request.Host.Value + "/";
                 var options = new SessionCreateOptions
                 {
                     SuccessUrl = domain + $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
