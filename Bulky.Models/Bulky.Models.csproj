@@ -8,11 +8,17 @@
 	<ItemGroup>
 		<None Remove="Models\" />
 		<None Remove="ViewModels\" />
+		<None Remove="CustomValidators\" />
+		<None Remove="InputModel\" />
+		<None Remove="ResponseModel\" />
 	</ItemGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 		<Folder Include="Models\" />
 		<Folder Include="ViewModels\" />
+		<Folder Include="CustomValidators\" />
+		<Folder Include="InputModel\" />
+		<Folder Include="ResponseModel\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.3" />

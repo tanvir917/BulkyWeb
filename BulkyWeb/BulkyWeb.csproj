@@ -46,6 +46,7 @@
 		<None Remove="Views\Shared\Components\" />
 		<None Remove="Views\Shared\Components\ShoppingCart\" />
 		<None Remove="Areas\Admin\Views\User\" />
+		<None Remove="Areas\Admin\Models\" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Areas\Admin\" />
@@ -67,6 +68,7 @@
 		<Folder Include="Views\Shared\Components\" />
 		<Folder Include="Views\Shared\Components\ShoppingCart\" />
 		<Folder Include="Areas\Admin\Views\User\" />
+		<Folder Include="Areas\Admin\Models\" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Bulky.DataAccess\Bulky.DataAccess.csproj">
